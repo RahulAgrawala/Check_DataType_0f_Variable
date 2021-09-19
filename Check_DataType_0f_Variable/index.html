@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check data type</title>
+</head>
+
+<body>
+    <h1>finding data type of variable</h1>
+    <p id='variableType'></p>
+    <script>
+        'use strict';
+        function VariableDataType(para) {
+            if (para === null) {
+                return document.getElementById('variableType').innerHTML = 'Variable type is null';
+                //or
+                //   return false;
+            }
+            switch (typeof para) {
+                case 'string': document.getElementById('variableType').innerHTML = 'Variable type is string';
+                    break;
+                case 'number': document.getElementById('variableType').innerHTML = 'Variable type is number';
+                    break;
+                case 'undefined': document.getElementById('variableType').innerHTML = 'Variable type is undefined';
+                    break;
+                case 'boolean': document.getElementById('variableType').innerHTML = 'Variable type is boolean';
+                    break;
+                case 'function': document.getElementById('variableType').innerHTML = 'Variable type is function';
+                    break;
+                default: document.getElementById('variableType').innerHTML = 'Variable type is object';
+            }
+        }
+        VariableDataType(55);
+    </script>
+</body>
+
+</html>
