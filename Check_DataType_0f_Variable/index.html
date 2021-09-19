@@ -16,8 +16,7 @@
         function VariableDataType(para) {
             if (para === null) {
                 return document.getElementById('variableType').innerHTML = 'Variable type is null';
-                //or
-                //   return false;
+                return;
             }
             switch (typeof para) {
                 case 'string': document.getElementById('variableType').innerHTML = 'Variable type is string';
